@@ -1,0 +1,14 @@
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\WebApplication.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\WebApplication.pdb
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\WebSharperProject.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\IntelliFactory.WebSharper.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\IntelliFactory.WebSharper.Formlet.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\IntelliFactory.Json.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\IntelliFactory.Generics.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\IntelliFactory.JavaScript.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\FSharp.PowerPack.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\IntelliFactory.ParserCombinators.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\WebSharperProject.pdb
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\obj\Debug\ResolveAssemblyReference.cache
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\obj\Debug\WebApplication.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\obj\Debug\WebApplication.pdb
