@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>WebSharperProject</RootNamespace>
     <AssemblyName>WebSharperProject</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <Name>WebSharperProject</Name>
     <TargetFrameworkProfile />
     <WebSharperVersion>1.0</WebSharperVersion>
@@ -44,7 +44,11 @@
     <Reference Include="FSharp.Core">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
   </ItemGroup>

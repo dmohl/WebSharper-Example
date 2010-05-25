@@ -4,7 +4,7 @@ open System
 open IntelliFactory.WebSharper
 open IntelliFactory.WebSharper.Html
 open IntelliFactory.WebSharper.Formlet
-open FSharpCouch
+open Newtonsoft.Json
 
 module RegistrationForm =
     let couchDBUrl = "http://localhost:5984/registration/"
@@ -38,10 +38,12 @@ module RegistrationForm =
         <*> input "First Name" "Please enter your first name"
         <*> input "Last Name" "Please enter your last name"
         <*> inputEmail "Email" "Please enter a valid email address"
-
+    
     [<Rpc>]
     let SaveRegistrationToCouch (registrationInformation:RegistrationInformation) =
-        CreateDocument couchDBUrl (Json.Stringify registrationInformation) |> ignore
+        JsonConvert.SerializeObject registrationInformation
+        |> FSharpCouch.CreateDocument couchDBUrl 
+        |> ignore
 
     [<JavaScript>]
     let RegistrationSequence =

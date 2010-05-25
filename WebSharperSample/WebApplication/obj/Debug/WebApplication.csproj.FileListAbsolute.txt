@@ -12,3 +12,4 @@ c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharper
 c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\obj\Debug\ResolveAssemblyReference.cache
 c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\obj\Debug\WebApplication.dll
 c:\users\dmohl\documents\visual studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\dmohl\Documents\Visual Studio 2010\Projects\WebSharperSample\WebSharperSample\WebApplication\bin\Newtonsoft.Json.dll
