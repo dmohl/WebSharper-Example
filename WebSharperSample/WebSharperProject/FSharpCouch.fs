@@ -11,7 +11,6 @@ module FSharpCouch
         request.Method <- methodName
         request.ContentType <- contentType 
         let bytes = UTF8Encoding.UTF8.GetBytes(string content)
-        //request.ContentLength <- bytes.LongLength
         use requestStream = request.GetRequestStream()
         requestStream.Write(bytes, 0, bytes.Length) 
         request
