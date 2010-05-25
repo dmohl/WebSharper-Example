@@ -1,4 +1,4 @@
-// p42b317e384cf4283
+// pc4bf636aabe2d4
 
 if (typeof WebSharperProject$ == "undefined")
 {
@@ -62,7 +62,7 @@ function (label, error)
 Delay(
 function (unitVar0)
 {
-  var couchDBRegistrationUrl = "http://localhost:5984/registration/";
+  var couchDBServer = "localhost";
   var inputRecord =
       (((((IntelliFactory$.WebSharper$).Formlet$).Enhance$).FormContainerConfiguration$).get_Default)(
       );
@@ -103,15 +103,6 @@ function (unitVar0)
       {
         return function (unitVar1)
                {
-                 var jQueryAjax = {};
-                 jQueryAjax.type = "POST";
-                 jQueryAjax.data = (JSON.stringify)(registrationInformation);
-                 jQueryAjax.dataType = 4;
-                 jQueryAjax.jsonp = "jsonp_callback";
-                 jQueryAjax.contentType = "application/json";
-                 var request = (jQuery.ajax)(jQueryAjax);
-                 (request.open)("POST", couchDBRegistrationUrl);
-                 (request.send)();
                  var x_1 =
                      new W$.$List({
                                     $: 1,
@@ -186,9 +177,9 @@ function (unitVar0)
        {
          return (builder_.Bind)(
                 registrationForm,
-                function (_arg1)
+                function (_arg6)
                 {
-                  var initialForm = _arg1;
+                  var initialForm = _arg6;
                   return (builder_.ReturnFrom)(
                          ((((IntelliFactory$.WebSharper$).Formlet$).Formlet$).OfElement)(
                          completeRegistration(initialForm)));

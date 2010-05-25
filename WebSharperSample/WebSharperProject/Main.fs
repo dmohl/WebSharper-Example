@@ -30,15 +30,15 @@ module RegistrationForm =
     [<JavaScript>]
     let RegistrationForm : Formlet<RegistrationInformation> =
         Formlet.Yield (fun firstName lastName email -> 
-                        {FirstName = firstName; 
-                         LastName = lastName; Email = email })
+                           {FirstName = firstName; 
+                            LastName = lastName; Email = email})
         <*> input "First Name" "Please enter your first name"
         <*> input "Last Name" "Please enter your last name"
         <*> inputEmail "Email" "Please enter a valid email address"
 
     [<JavaScript>]
     let RegistrationSequence =
-        let couchDBRegistrationUrl = "http://localhost:5984/registration/"
+        let couchDBServer = "localhost"
         let registrationForm =
             RegistrationForm
             |> Enhance.WithSubmitAndResetButtons
@@ -50,15 +50,15 @@ module RegistrationForm =
                         |> Some
                 }
         let completeRegistration registrationInformation () =
-            let jQueryAjax = JQueryAjax()
-            jQueryAjax.Type <- Xhr.POST
-            jQueryAjax.Data <- Json.Stringify registrationInformation
-            jQueryAjax.DataType <- JQueryAjaxDataType.JsonP
-            jQueryAjax.JsonP <- "jsonp_callback"
-            jQueryAjax.ContentType <- "application/json"
-            let request = JQuery.Ajax jQueryAjax
-            request.Open(Xhr.POST, couchDBRegistrationUrl)
-            do request.Send()
+//            let jQueryAjax = JQueryAjax()
+//            jQueryAjax.Type <- Xhr.POST
+//            jQueryAjax.Data <- Json.Stringify registrationInformation
+//            jQueryAjax.DataType <- JQueryAjaxDataType.JsonP
+//            jQueryAjax.JsonP <- "jsonp_callback"
+//            jQueryAjax.ContentType <- "application/json"
+//            let request = JQuery.Ajax jQueryAjax
+//            request.Open(Xhr.POST, couchDBRegistrationUrl)
+//            do request.Send()
             FieldSet [
                 Legend [Text "Registration summary"]
                 P ["Hi " + registrationInformation.FirstName + " " + 
