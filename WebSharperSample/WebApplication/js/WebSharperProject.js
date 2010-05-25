@@ -1,4 +1,4 @@
-// pc4bf636aabe2d4
+// p4cda06f80549808e
 
 if (typeof WebSharperProject$ == "undefined")
 {
@@ -62,7 +62,6 @@ function (label, error)
 Delay(
 function (unitVar0)
 {
-  var couchDBServer = "localhost";
   var inputRecord =
       (((((IntelliFactory$.WebSharper$).Formlet$).Enhance$).FormContainerConfiguration$).get_Default)(
       );
@@ -103,6 +102,9 @@ function (unitVar0)
       {
         return function (unitVar1)
                {
+                 ((W$.Rpc).Send)(
+                 "WebSharperProject.RegistrationForm, WebSharperProject, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null:SaveRegistrationToCouch",
+                 [registrationInformation]);
                  var x_1 =
                      new W$.$List({
                                     $: 1,

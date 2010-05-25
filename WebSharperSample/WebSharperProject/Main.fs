@@ -4,8 +4,11 @@ open System
 open IntelliFactory.WebSharper
 open IntelliFactory.WebSharper.Html
 open IntelliFactory.WebSharper.Formlet
+open FSharpCouch
 
 module RegistrationForm =
+    let couchDBUrl = "http://localhost:5984/registration/"
+
     type RegistrationInformation = 
         {
             FirstName : string
@@ -36,9 +39,12 @@ module RegistrationForm =
         <*> input "Last Name" "Please enter your last name"
         <*> inputEmail "Email" "Please enter a valid email address"
 
+    [<Rpc>]
+    let SaveRegistrationToCouch (registrationInformation:RegistrationInformation) =
+        CreateDocument couchDBUrl (Json.Stringify registrationInformation) |> ignore
+
     [<JavaScript>]
     let RegistrationSequence =
-        let couchDBServer = "localhost"
         let registrationForm =
             RegistrationForm
             |> Enhance.WithSubmitAndResetButtons
@@ -50,15 +56,7 @@ module RegistrationForm =
                         |> Some
                 }
         let completeRegistration registrationInformation () =
-//            let jQueryAjax = JQueryAjax()
-//            jQueryAjax.Type <- Xhr.POST
-//            jQueryAjax.Data <- Json.Stringify registrationInformation
-//            jQueryAjax.DataType <- JQueryAjaxDataType.JsonP
-//            jQueryAjax.JsonP <- "jsonp_callback"
-//            jQueryAjax.ContentType <- "application/json"
-//            let request = JQuery.Ajax jQueryAjax
-//            request.Open(Xhr.POST, couchDBRegistrationUrl)
-//            do request.Send()
+            do SaveRegistrationToCouch registrationInformation
             FieldSet [
                 Legend [Text "Registration summary"]
                 P ["Hi " + registrationInformation.FirstName + " " + 

@@ -9,7 +9,6 @@ module FSharpCouch
     let ProcessRequest url methodName postData contentType =
         async { let request =  WebRequest.Create(string url)
                 request.Method <- methodName
-                request.Timeout <- System.Threading.Timeout.Infinite
                 request.ContentType <- contentType 
                 let bytes = UTF8Encoding.UTF8.GetBytes(string postData)
                 request.ContentLength <- bytes.LongLength
@@ -20,3 +19,6 @@ module FSharpCouch
                 use reader = new StreamReader(stream)
                 let contents = reader.ReadToEnd()
                 return contents }
+        |> Async.RunSynchronously
+    let CreateDocument url content = 
+        ProcessRequest url "POST" content "application/json"
