@@ -58,7 +58,7 @@ module RegistrationForm =
                         |> Some
                 }
         let completeRegistration registrationInformation () =
-            do SaveRegistrationToCouch registrationInformation
+            SaveRegistrationToCouch registrationInformation
             FieldSet [
                 Legend [Text "Registration summary"]
                 P ["Hi " + registrationInformation.FirstName + " " + 
